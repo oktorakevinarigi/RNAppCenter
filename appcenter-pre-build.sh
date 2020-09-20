@@ -2,9 +2,9 @@
 # Creates an .env from ENV variables for use with react-native-config
 if [ $ENVIRONMENT_VARIABLE = "dev" ]; then
    cp .env.dev .env
-else if [ $ENVIRONMENT_VARIABLE = "stg" ]; then
+elif [ $ENVIRONMENT_VARIABLE = "stg" ]; then
    cp .env.staging .env
-else if [ $ENVIRONMENT_VARIABLE = "prod" ]; then
+elif [ $ENVIRONMENT_VARIABLE = "prod" ]; then
     cp .env.prod .env
 fi
 printf "\n.env created with contents:\n"

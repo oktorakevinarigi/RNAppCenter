@@ -128,13 +128,26 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
+    
+    flavorDimensions "default"
+    
     defaultConfig {
         applicationId "com.rnappcenter"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+    }
+    productFlavors {
+        dev {
+            applicationIdSuffix ".dev"
+        }
+        stg {
+            applicationIdSuffix ".stg"
+        }
+        prod {
+            
+        }
     }
     splits {
         abi {
